@@ -1,6 +1,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import '../styles/main.css';
-import Index from './pages/index.js';
+import '../styles/style.css';
+import '../styles/responsive.css';
+import Index from './views/pages/index';
 
 const routes = {
   '/': Index,

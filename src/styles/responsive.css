@@ -1,0 +1,175 @@
+@media screen and (min-width: 200px) {
+  /* 
+    navigation 
+  */
+  #navigation {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    color: black;
+
+    transform: translate(-250px, 0);
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+    z-index: 9999;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+
+  .nav-item {
+    padding: 1rem;
+  }
+
+  .nav-item a {
+    padding: 1rem;
+  }
+
+  .nav-item a:hover {
+    background-color: white;
+    color: #0e2954;
+    border-radius: 44px;
+  }
+
+  #navigation.open {
+    transform: translate(0, 0);
+  }
+
+  #hamburger {
+    font-size: 32px;
+    color: inherit;
+    text-decoration: none;
+    min-width: 44px;
+    min-height: 44px;
+    text-align: center;
+  }
+
+  /* 
+   * hero
+   */
+
+  .hero-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 1rem;
+    text-align: center;
+
+    min-height: 50vh;
+    overflow: hidden;
+    color: white;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    z-index: -99;
+  }
+
+  .hero-wrapper h2 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+  }
+
+  .hero-wrapper p {
+    font-size: 0.8rem;
+  }
+
+  /* 
+    content
+  */
+
+  .content-wrapper {
+    padding: 1rem 1rem;
+  }
+
+  .restaurants-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero-wrapper {
+    min-height: 70vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* 
+    content
+  */
+
+  .restaurants-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 
+   * hero
+   */
+
+  .hero-wrapper {
+    padding: 0 5rem;
+
+    min-height: 90vh;
+  }
+
+  .hero-wrapper h2 {
+    font-size: 3rem;
+    margin: 0 0 5rem;
+  }
+
+  .hero-wrapper p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-wrapper {
+    padding: 1rem 4rem;
+  }
+
+  /* 
+    navigation
+  */
+
+  #hamburger {
+    display: none;
+  }
+
+  #navigation {
+    width: auto;
+    height: auto;
+    position: static;
+    transform: translate(0, 0);
+    background-color: transparent;
+  }
+
+  .nav-list {
+    gap: 4rem;
+
+    width: 100%;
+    flex-direction: row;
+    color: white;
+  }
+
+  /* 
+    content
+  */
+
+  .restaurants-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
