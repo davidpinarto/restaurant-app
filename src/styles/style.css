@@ -100,6 +100,29 @@ body {
   padding: 1rem 0 0;
 }
 
+.restaurant-item .restaurant-description {
+  margin-bottom: 5rem;
+}
+
+.restaurant-item button {
+  background-color: #fff;
+  border: none;
+  border-radius: 44px;
+  padding: 1rem;
+
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+
+.restaurant-item button:hover {
+  color: #0e2954;
+}
+.restaurant-item button a {
+  padding: 1rem;
+}
+
 .restaurant-city-tag {
   position: absolute;
   top: 1.5rem;
@@ -109,6 +132,57 @@ body {
   color: white;
   background-color: #1f6e8c;
   z-index: 99;
+}
+
+.menus-information li {
+  margin-left: 2rem;
+  list-style: disc;
+}
+
+.restaurant-detail {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #1f6e8c;
+  color: white;
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+.restaurant-detail h2 {
+  margin-bottom: 1rem;
+}
+
+.restaurant-detail-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.restaurant-detail-container img {
+  width: 100%;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.restaurant-information {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.customer-review-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+
+  color: black;
+}
+
+.customer-review-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 /* 

@@ -1,15 +1,18 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/style.css';
 import '../styles/responsive.css';
-import Index from './views/pages/index';
+import App from './views/app';
 
-const routes = {
-  '/': Index,
-};
+const app = new App({
+  button: document.querySelector('#hamburger-button'),
+  drawer: document.querySelector('#navigation'),
+  content: document.querySelector('#main-content'),
+});
 
-const detectRoute = () => routes[window.location.pathname];
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
 
-window.addEventListener('DOMContentLoaded', async () => {
-  const route = detectRoute();
-  route.init();
+window.addEventListener('load', () => {
+  app.renderPage();
 });
