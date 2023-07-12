@@ -3,19 +3,19 @@ import html from './format-on-save-html';
 
 const TemplateCreatorHelper = {
   foodsTemplate({ foods }) {
-    let listItems = '';
+    let foodItem = '';
 
-    foods.forEach((food) => (listItems += this._createFoodList(food)));
+    foods.forEach((food) => (foodItem += this._createFoodList(food)));
 
-    return listItems;
+    return foodItem;
   },
 
   drinksTemplate({ drinks }) {
-    let listItems = '';
+    let drinkItem = '';
 
-    drinks.forEach((drink) => (listItems += this._createFoodList(drink)));
+    drinks.forEach((drink) => (drinkItem += this._createFoodList(drink)));
 
-    return listItems;
+    return drinkItem;
   },
 
   customerReviewTemplate(customerReviews) {

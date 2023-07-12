@@ -2,15 +2,11 @@ import CONFIG from '../../globals/config';
 import html from '../../utils/format-on-save-html';
 import TemplateCreatorHelper from '../../utils/template-creator-helper';
 
-// img url CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId
-
-// ${TemplateCreatorHelper.foodsTemplate(restaurant.menus)}
-// ${TemplateCreatorHelper.drinksTemplate(restaurant.menus)}
 const createRestaurantTemplate = (restaurant) => html`
   <div class="restaurant-item">
     <figure>
       <img src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name} restaurant" />
-      <figcaption>Rating ${restaurant.rating}</figcaption>
+      <figcaption>Rating ⭐️${restaurant.rating}</figcaption>
     </figure>
 
     <h3>${restaurant.name}</h3>
@@ -24,8 +20,8 @@ const createRestaurantDetailTemplate = (restaurant) => html`
   <h2 style="text-align: center;">${restaurant.name}</h2>
   <div class="restaurant-detail-container">
     <figure>
-      <img src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name}" />
-      <figcaption>Rating ${restaurant.rating}</figcaption>
+      <img src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name} restaurant" />
+      <figcaption>Rating ⭐️${restaurant.rating}</figcaption>
     </figure>
     <div class="restaurant-information">
       <h3 style="text-align: center;">Information</h3>

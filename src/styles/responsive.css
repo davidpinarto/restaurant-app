@@ -182,7 +182,7 @@
   }
 
   .restaurant-detail {
-    margin: 3rem 6rem 3rem;
+    margin: 3rem 8rem 3rem;
     padding: 2rem 3rem 2rem;
   }
 
@@ -192,12 +192,15 @@
   }
 }
 
+@media screen and (min-width: 1366px) {
+  .restaurant-detail {
+    margin: 3rem 15rem 3rem;
+    padding: 2rem 3rem 2rem;
+  }
+}
+
 @media screen and (min-width: 1600px) {
   .restaurants-list {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .restaurant-detail {
-    margin: 3rem 10rem 3rem;
   }
 }
