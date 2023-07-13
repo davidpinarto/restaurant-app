@@ -1,4 +1,6 @@
+import FavoriteRestaurants from '../../data/favorite-restaurants';
 import html from '../../utils/format-on-save-html';
+import { createRestaurantTemplate } from '../templates/template-creator';
 
 const Favorite = {
   async render() {
@@ -11,7 +13,12 @@ const Favorite = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const restaurants = await FavoriteRestaurants.getAllRestaurants();
+
+    const restaurantList = document.querySelector('.restaurants-list');
+    restaurants.forEach((restaurant) => {
+      restaurantList.innerHTML += createRestaurantTemplate(restaurant);
+    });
   },
 };
 

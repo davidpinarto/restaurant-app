@@ -26,7 +26,7 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurants = await Restaurants.home();
+    const restaurants = await Restaurants.getRestaurants();
 
     const restaurantList = document.querySelector('.restaurants-list');
     restaurants.forEach((restaurant) => {

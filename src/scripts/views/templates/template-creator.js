@@ -5,7 +5,10 @@ import TemplateCreatorHelper from '../../utils/template-creator-helper';
 const createRestaurantTemplate = (restaurant) => html`
   <div class="restaurant-item">
     <figure>
-      <img src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name} restaurant" />
+      <img
+        src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}"
+        alt="${restaurant.name} restaurant"
+      />
       <figcaption>Rating ⭐️${restaurant.rating}</figcaption>
     </figure>
 
@@ -20,7 +23,10 @@ const createRestaurantDetailTemplate = (restaurant) => html`
   <h2 style="text-align: center;">${restaurant.name}</h2>
   <div class="restaurant-detail-container">
     <figure>
-      <img src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name} restaurant" />
+      <img
+        src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}"
+        alt="${restaurant.name} restaurant"
+      />
       <figcaption>Rating ⭐️${restaurant.rating}</figcaption>
     </figure>
     <div class="restaurant-information">
@@ -57,4 +63,21 @@ const createRestaurantDetailTemplate = (restaurant) => html`
   </div>
 `;
 
-export { createRestaurantTemplate, createRestaurantDetailTemplate };
+const createLikeButtonTemplate = () => html`
+  <button aria-label="like this restaurant" id="likeButton" class="like">
+    <i class="bi bi-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => html`
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
+    <i class="bi bi-heart-fill" aria-hidden="true"></i>
+  </button>
+`;
+
+export {
+  createRestaurantTemplate,
+  createRestaurantDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};
