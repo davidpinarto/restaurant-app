@@ -63,13 +63,17 @@ const createRestaurantDetailTemplate = (restaurant) => html`
   </div>
 `;
 
-const createLikeButtonTemplate = () => html`
+const createEmptyFavoriteTemplate = () => html`
+  <h3 class="empty-restaurant">Favorite restaurant is empty</h3>
+`;
+
+const createLikeRestaurantButtonTemplate = () => html`
   <button aria-label="like this restaurant" id="likeButton" class="like">
     <i class="bi bi-heart" aria-hidden="true"></i>
   </button>
 `;
 
-const createLikedButtonTemplate = () => html`
+const createUnlikeRestaurantButtonTemplate = () => html`
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="bi bi-heart-fill" aria-hidden="true"></i>
   </button>
@@ -78,6 +82,7 @@ const createLikedButtonTemplate = () => html`
 export {
   createRestaurantTemplate,
   createRestaurantDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate,
+  createUnlikeRestaurantButtonTemplate,
+  createEmptyFavoriteTemplate,
 };

@@ -80,6 +80,11 @@ body {
   padding: 1rem 0;
 }
 
+.empty-restaurant {
+  text-align: center;
+  grid-column: span 2;
+}
+
 .restaurant-item {
   background-color: #1f6e8c;
   color: white;

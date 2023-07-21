@@ -1,6 +1,6 @@
 import FavoriteRestaurants from '../../data/favorite-restaurants';
 import html from '../../utils/format-on-save-html';
-import { createRestaurantTemplate } from '../templates/template-creator';
+import { createRestaurantTemplate, createEmptyFavoriteTemplate } from '../templates/template-creator';
 
 const Favorite = {
   async render() {
@@ -16,9 +16,14 @@ const Favorite = {
     const restaurants = await FavoriteRestaurants.getAllRestaurants();
 
     const restaurantList = document.querySelector('.restaurants-list');
-    restaurants.forEach((restaurant) => {
-      restaurantList.innerHTML += createRestaurantTemplate(restaurant);
-    });
+
+    if (!restaurants.length) {
+      restaurantList.innerHTML += createEmptyFavoriteTemplate();
+    } else {
+      restaurants.forEach((restaurant) => {
+        restaurantList.innerHTML += createRestaurantTemplate(restaurant);
+      });
+    }
   },
 };
 

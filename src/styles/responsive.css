@@ -181,6 +181,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .empty-restaurant {
+    grid-column: span 3;
+  }
+
   .restaurant-detail {
     margin: 3rem 8rem 3rem;
     padding: 2rem 3rem 2rem;
@@ -202,5 +206,9 @@
 @media screen and (min-width: 1600px) {
   .restaurants-list {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .empty-restaurant {
+    grid-column: span 4;
   }
 }
