@@ -22,6 +22,10 @@ img {
   display: block;
 }
 
+picture {
+  width: 100%;
+}
+
 /* 
  * skip to content 
  */

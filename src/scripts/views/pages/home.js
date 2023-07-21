@@ -7,7 +7,22 @@ const Home = {
     return html`
       <div class="hero">
         <div class="hero-wrapper">
-          <img src="./images/heros/hero-image_2.jpg" alt="" class="hero-img" />
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              type="image/webp"
+              srcset="./images/heros/hero-image_2-small.webp"
+            />
+            <source
+              type="image/webp"
+              srcset="./images/heros/hero-image_2-large.webp"
+            />
+            <img
+              src="./images/heros/hero-image_2-large.jpg"
+              alt=""
+              class="hero-img"
+            />
+          </picture>
           <h2>Wellcome To DDFood Restaurant</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
