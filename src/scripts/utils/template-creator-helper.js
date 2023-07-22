@@ -21,9 +21,14 @@ const TemplateCreatorHelper = {
   customerReviewTemplate(customerReviews) {
     let customerReviewContainer = '';
 
-    customerReviews.forEach((customerReview) => {
-      customerReviewContainer += this._createCustomerReviewItem(customerReview);
-    });
+    if (!customerReviews) {
+      customerReviewContainer += this._createCustomerReviewEmptyItem();
+    } else {
+      customerReviews.forEach((customerReview) => {
+        customerReviewContainer
+          += this._createCustomerReviewItem(customerReview);
+      });
+    }
 
     return customerReviewContainer;
   },
@@ -44,6 +49,9 @@ const TemplateCreatorHelper = {
         <div>Date: ${customerReview.date}</div>
       </div>
     `;
+  },
+  _createCustomerReviewEmptyItem() {
+    return html` <h5 style="color: white">There's no review yet in this restaurant</h5> `;
   },
 };
 

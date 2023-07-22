@@ -17,6 +17,11 @@ exports.config = {
       windowSize: '1200x900',
     },
   },
+  plugins: {
+    tryTo: {
+      enabled: true,
+    },
+  },
   include: {
     I: './steps_file.js',
   },
