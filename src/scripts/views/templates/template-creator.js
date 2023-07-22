@@ -8,15 +8,15 @@ const createRestaurantTemplate = (restaurant) => html`
       <picture>
         <source
           media="(max-width: 1024px)"
-          srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}"
+          data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}"
         />
         <source
           media="(max-width: 1366px)"
-          srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}"
+          data-srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}"
         />
         <img 
           class="lazyload"
-          src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}"
+          data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}"
           alt="${restaurant.name} restaurant"
         />
       </picture>
@@ -37,15 +37,15 @@ const createRestaurantDetailTemplate = (restaurant) => html`
       <picture>
         <source
           media="(max-width: 1024px)"
-          srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}"
+          data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}"
         />
         <source
           media="(max-width: 1366px)"
-          srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}"
+          data-srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}"
         />
         <img 
           class="lazyload"
-          src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}"
+          data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}"
           alt="${restaurant.name} restaurant"
         />
       </picture>

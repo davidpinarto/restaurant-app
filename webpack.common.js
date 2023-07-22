@@ -1,3 +1,4 @@
+/* eslint-disable prefer-regex-literals */
 /* eslint-disable prefer-destructuring */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -45,6 +46,18 @@ module.exports = {
     }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('^https://restaurant-api.dicoding.dev/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'DDRestaurant_Cache',
+            cacheableResponse: {
+              statuses: [200],
+            },
+          },
+        },
+      ],
     }),
     new ImageminWebpWebpackPlugin({
       config: [

@@ -11,16 +11,15 @@ const Home = {
             <source
               media="(max-width: 600px)"
               type="image/webp"
-              srcset="./images/heros/hero-image_2-small.webp"
+              data-srcset="./images/heros/hero-image_2-small.webp"
             />
             <source
               type="image/webp"
-              srcset="./images/heros/hero-image_2-large.webp"
+              data-srcset="./images/heros/hero-image_2-large.webp"
             />
             <img
-              src="./images/heros/hero-image_2-large.jpg"
-              alt=""
-              class="hero-img"
+              data-src="./images/heros/hero-image_2-large.jpg"
+              class="hero-img lazyload"
             />
           </picture>
           <h2>Wellcome To DDFood Restaurant</h2>
